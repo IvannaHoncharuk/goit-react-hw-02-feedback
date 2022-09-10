@@ -13,10 +13,9 @@ export class App extends Component{
       bad: 0
   }
   
-  countIncrement = e => {
+  countIncrement = data => {
     this.setState(prevState => {
-      const countKey = e.target.name.toLowerCase()
-      return { [countKey]: prevState[countKey] + 1 };
+      return { [data]: prevState[data] + 1 };
     });
   };
 

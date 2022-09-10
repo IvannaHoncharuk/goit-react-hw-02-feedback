@@ -5,11 +5,11 @@ import { Button } from './FeedbackOptions.styled';
 export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
   return (
     <Box as="ul" display="flex" gridGap={4}>
-      {options.map(option => {
+      {options.map(data => {
         return (
-          <li key={option}>
-            <Button name={option} onClick={onLeaveFeedback}>
-              {option.replace(/^./, option[0].toUpperCase())}
+          <li key={data}>
+            <Button onClick={() => onLeaveFeedback(data)}>
+              {data.replace(/^./, data[0].toUpperCase())}
             </Button>
           </li>
         );
